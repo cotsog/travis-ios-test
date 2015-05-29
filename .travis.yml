@@ -1,0 +1,7 @@
+language: objective-c
+sudo: false
+os: osx
+osx_image: beta-xcode6.3
+
+script:
+- xcodebuild -project travis-ios-test.xcodeproj -scheme travis-ios-test -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 5s,OS=7.1' test
