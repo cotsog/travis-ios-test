@@ -6,4 +6,5 @@ osx_image: beta-xcode6.3
 script:
 - xcodebuild -showsdks
 - instruments -s devices
+- xcrun simctl list
 - xcodebuild -project travis-ios-test.xcodeproj -scheme travis-ios-test -sdk iphonesimulator8.3  -destination 'platform=iOS Simulator,name=iPhone 5s,OS=8.1' test
