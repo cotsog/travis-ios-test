@@ -9,6 +9,7 @@ script:
 - xcrun simctl list devices
 - sudo cat /etc/launchd.conf
 - sudo chown $user:wheel /private/tmp
+- echo $DYLD_INSERT_LIBRARIES
 - xcrun simctl boot 81C46931-BFAB-4669-87FC-9E45E4634196
 - xcrun simctl boot 1005D367-4809-4B61-A33E-31B3A1FE6B71
 - xcodebuild -project travis-ios-test.xcodeproj -scheme travis-ios-test -destination 'platform=iOS Simulator,name=iPhone 5s,OS=7.1' test
