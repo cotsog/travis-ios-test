@@ -1,5 +1,5 @@
 language: objective-c
-sudo: false
+sudo: true
 os: osx
 osx_image: beta-xcode6.3
 
@@ -8,4 +8,5 @@ script:
 - instruments -s devices
 - xcrun simctl list devices
 - xcrun simctl boot 81C46931-BFAB-4669-87FC-9E45E4634196
+- sudo chown $user:wheel /private/tmp
 - xcodebuild -project travis-ios-test.xcodeproj -scheme travis-ios-test -destination 'platform=iOS Simulator,name=iPhone 5s,OS=7.1' test
