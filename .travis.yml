@@ -4,7 +4,7 @@ os: osx
 osx_image: beta-xcode6.3
 
 script:
-- echo "$TRAVIS" > out.txt
+- echo "TRAVIS="$TRAVIS > out.txt
 - cat out.txt
 # - xcodebuild -showsdks
 # - instruments -s devices
