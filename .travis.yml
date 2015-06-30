@@ -13,6 +13,8 @@ script:
 # - xcodebuild -project travis-ios-test.xcodeproj -scheme travis-ios-test -destination 'platform=iOS Simulator,name=iPhone 5s,OS=7.1' test
 
 after_success:
-- echo "TEST"
-- node ./success.js
-- node success.js
+- echo $MY_SECRET_SMILE
+
+env:
+  global:
+    secure: eS0GBIJCRgYP/dnustbs1ULLZypOpGrK6+eMZrlyxVyAWasfWOYxfwH9LIeK2xjRkmmRqxpqcNKPRbeOcXSBqZybFVG3cQxc6edEjnAldRapLh5r6muT0cp282dbnugJG0GDspUcwhfkkPwwRKi0Wmu9lzSFkhomX2JW7EukE5+BV9jjm2Ken6ZXQ0xM23KUT9a9dnl4u8p9J7BQd0zx7QF2PIo9+OXJQZeqcM+vuEf2htsvRWc39iVbgb0irC0miQVN4ZEMHWsHtet+JZRai2LgnQvD8RX+2mQSqMSCnhBLie+SSVhWWs50LIirSt73G5MyiQtyj3Ya7yyzQs1wPAciSRLs/TcVohUORM9bb3nnnVYN4h+WO+BzR4P7Bgka/8zpAq4/9Sz0Eb2SvewE1LIAqwaAFl7KkuSzNDVotpcCWZCn7XPgUayeLjnAL387/fUWYpuB2NZvAFM9Usj1nhPZBxA9VUHByDvlOOegXMlb/80tyOIsMaVOgZeAtMSfHurDxkBdiDvB9irCdR2sNDJLdbXjihQtvO8VX3Rh47GG8P/VTJfCNHifZa7l5PBJPy06NdzrAplwVEEFCz5QHr/SV1HUTV8c2AbQNGqnFuigDluXSM3ZHMMxLX7xEK25SRTQYreGNxjcS43hRll3T+xZAyyO2/h87QJxxhN89o4=
