@@ -14,6 +14,7 @@ script:
 
 after_success:
 - echo $MY_SECRET_SMILE
+- node ./success.js
 
 env:
   global:
